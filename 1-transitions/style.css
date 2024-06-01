@@ -1,0 +1,74 @@
+:root {
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+button {
+  padding: 0.5rem 0.75rem;
+  color: white;
+  background-color: #3b82f6;
+  border-radius: 0.25rem;
+  border: none;
+  font-size: inherit;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.switch {
+  cursor: pointer;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch .slider {
+  --switch-height: 2rem;
+  --switch-width: 5rem;
+  display: flex;
+  align-items: center;
+  height: var(--switch-height);
+  width: var(--switch-width);
+  background: #f3f4f6;
+  padding: 0.25rem;
+  border-radius: var(--switch-height);
+  box-shadow: var(--shadow);
+}
+
+.switch .slider::after {
+  content: "";
+  height: var(--switch-height);
+  width: var(--switch-height);
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+}
+
+.switch input:checked+.slider {
+  background: #3b82f6;
+}
+
+.switch input:checked+.slider::after {
+  transform: translateX(calc(var(--switch-width) - var(--switch-height)));
+}
