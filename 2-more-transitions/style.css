@@ -14,27 +14,28 @@ body {
   justify-content: center;
   margin: 0;
   padding: 1rem;
-  background: #f9fafb;
-  font-family: "Open Sans", sans-serif;
+  color: #a3a3a3;
+  background: black;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "slnt" 0;
+  line-height: 1.7;
 }
 
 button {
   padding: 0.5rem 0.75rem;
   color: white;
-  background-color: #3b82f6;
+  background: transparent;
+  border: 1px solid #262626;
   border-radius: 0.25rem;
-  border: none;
   font-size: inherit;
   box-shadow: var(--shadow);
   cursor: pointer;
-  transition:
-    background-color 0.2s,
-    transform 0.2s;
+  transition: background-color 0.15s;
 }
 
 button:hover {
-  background-color: #2563eb;
-  transform: translateY(-1px);
+  background-color: #262626;
 }
 
 .popover {
@@ -48,8 +49,9 @@ button:hover {
   left: 50%;
   width: 24rem;
   padding: 1rem;
-  background: white;
-  box-shadow: var(--shadow);
+  border: 1px solid #262626;
+  font-size: 0.875rem;
+  font-weight: 300;
   border-radius: 4px;
   transform: translateX(-50%);
 }
