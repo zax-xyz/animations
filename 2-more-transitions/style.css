@@ -1,0 +1,59 @@
+:root {
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem;
+  background: #f9fafb;
+  font-family: "Open Sans", sans-serif;
+}
+
+button {
+  padding: 0.5rem 0.75rem;
+  color: white;
+  background-color: #3b82f6;
+  border-radius: 0.25rem;
+  border: none;
+  font-size: inherit;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+}
+
+button:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.popover {
+  position: relative;
+}
+
+.popover-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 50%;
+  width: 24rem;
+  padding: 1rem;
+  background: white;
+  box-shadow: var(--shadow);
+  border-radius: 4px;
+  transform: translateX(-50%);
+}
+
+.popover-content.active {
+  display: block;
+}
