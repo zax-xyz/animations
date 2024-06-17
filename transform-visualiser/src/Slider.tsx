@@ -18,7 +18,7 @@ const Slider = ({
       </span>
       <RUISlider.Root
         className="relative flex items-center w-full h-5"
-        defaultValue={[value]}
+        value={[value]}
         {...props}
       >
         <RUISlider.Track className="bg-gray-200 relative flex-1 rounded-full h-[3px]">
