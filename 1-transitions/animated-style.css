@@ -1,0 +1,7 @@
+.switch.animated .slider {
+  transition: background-color 0.15s;
+}
+
+.switch.animated .slider::after {
+  transition: transform 0.15s;
+}

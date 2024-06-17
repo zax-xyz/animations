@@ -33,6 +33,11 @@ button:hover {
   background-color: #262626;
 }
 
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
 .switch {
   cursor: pointer;
 }
