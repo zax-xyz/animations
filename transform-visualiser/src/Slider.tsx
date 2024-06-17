@@ -5,16 +5,22 @@ import { useId, type ComponentProps } from "react";
 const Slider = ({
   label,
   value,
+  suffix,
   ...props
 }: Omit<ComponentProps<typeof RUISlider.Root>, "value"> & {
   label: string;
   value: number;
+  suffix?: string;
 }) => {
   const id = useId();
   return (
     <div>
       <span>
-        <label id={id}>{label}</label>: {value}
+        <span className="text-gray-700 font-light">
+          <label id={id}>{label}</label>:
+        </span>{" "}
+        <span className="font-medium">{value}</span>
+        <span className="text-sm font-light text-gray-500">{suffix}</span>
       </span>
       <RUISlider.Root
         className="relative flex items-center w-full h-5"

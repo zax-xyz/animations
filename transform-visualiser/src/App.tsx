@@ -50,6 +50,7 @@ function App() {
             min={-100}
             max={100}
             step={1}
+            suffix="px"
           />
           <Slider
             label="translateY"
@@ -58,6 +59,7 @@ function App() {
             min={-100}
             max={100}
             step={1}
+            suffix="px"
           />
           {enabled3d && (
             <>
@@ -68,6 +70,7 @@ function App() {
                 min={-1000}
                 max={1000}
                 step={1}
+                suffix="px"
               />
               <div className="flex flex-col gap-2">
                 <label className="flex gap-2 text-sm">
@@ -85,6 +88,7 @@ function App() {
                     min={0}
                     max={1000}
                     step={1}
+                    suffix="px"
                   />
                 )}
               </div>
@@ -107,6 +111,7 @@ function App() {
                 min={-180}
                 max={180}
                 step={1}
+                suffix="deg"
               />
               <Slider
                 label="rotateY"
@@ -115,6 +120,7 @@ function App() {
                 min={-180}
                 max={180}
                 step={1}
+                suffix="deg"
               />
               <Slider
                 label="rotateZ"
@@ -123,6 +129,7 @@ function App() {
                 min={-180}
                 max={180}
                 step={1}
+                suffix="deg"
               />
             </>
           ) : (
@@ -133,11 +140,12 @@ function App() {
               min={-180}
               max={180}
               step={1}
+              suffix="deg"
             />
           )}
         </div>
         <button
-          className="p-1.5 hover:bg-gray-100"
+          className="p-1.5 transition-colors hover:bg-gray-100"
           onClick={() => {
             setTranslateX(defaultValues.translateX);
             setTranslateY(defaultValues.translateY);
