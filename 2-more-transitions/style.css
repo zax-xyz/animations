@@ -27,6 +27,7 @@ button {
   color: white;
   background: transparent;
   border: 1px solid #262626;
+  /* border: none; */
   border-radius: 0.25rem;
   font-size: inherit;
   box-shadow: var(--shadow);
@@ -50,6 +51,8 @@ button:hover {
   width: 24rem;
   padding: 1rem;
   border: 1px solid #262626;
+  /* background: #0a0a0a; */
+  /* background: rgba(255, 255, 255, 0.05); */
   font-size: 0.875rem;
   font-weight: 300;
   border-radius: 4px;
