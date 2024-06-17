@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Slider from "./Slider";
 import Checkbox from "./Checkbox";
+import mao from "./mao.jpg";
 
 const defaultValues = {
   translateX: 0,
@@ -47,8 +48,8 @@ function App() {
             label="translateX"
             value={translateX}
             onValueChange={([value]) => setTranslateX(value)}
-            min={-100}
-            max={100}
+            min={-300}
+            max={300}
             step={1}
             suffix="px"
           />
@@ -56,8 +57,8 @@ function App() {
             label="translateY"
             value={translateY}
             onValueChange={([value]) => setTranslateY(value)}
-            min={-100}
-            max={100}
+            min={-300}
+            max={300}
             step={1}
             suffix="px"
           />
@@ -165,14 +166,14 @@ function App() {
         style={{ perspective: perspectiveEnabled ? perspective : "none" }}
       >
         <div
-          className="z-10 flex items-center justify-center w-48 h-48 bg-white text-lg rounded-md shadow"
+          className="z-10 flex items-center justify-center p-4 bg-white text-lg rounded-md shadow"
           style={{ transform }}
         >
-          lorem ipsum
+          <img src={mao} className="h-56 w-56" />
         </div>
         <span className="absolute left-1/2 inset-y-0 -translate-x-1/2 border-l border-l-gray-200"></span>
         <span className="absolute top-1/2 inset-x-0 -translate-y-1/2 border-b border-b-gray-200"></span>
-        <pre className="absolute bottom-4 right-4 text-sm">
+        <pre className="absolute bottom-4 right-4 text-sm text-gray-600">
           transform: {transform};
         </pre>
       </div>
