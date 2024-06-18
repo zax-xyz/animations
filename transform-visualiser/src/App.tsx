@@ -146,7 +146,7 @@ function App() {
           )}
         </div>
         <button
-          className="p-1.5 transition-colors hover:bg-gray-100"
+          className="p-1.5 transition-colors bg-gray-50 hover:bg-gray-100"
           onClick={() => {
             setTranslateX(defaultValues.translateX);
             setTranslateY(defaultValues.translateY);
