@@ -8,12 +8,15 @@ import {
 } from "@headlessui/react";
 
 function App() {
-  const [open, setOpen] = useState(false);
-
   return (
     <Popover className="relative">
       <PopoverButton>toggle popover</PopoverButton>
-      <Transition>
+      <Transition
+        enter="transition-[opacity,transform] duration-150 ease-out"
+        enterFrom="opacity-0 -translate-y-1"
+        leave="transition-[opacity,transform] duration-150 ease-in"
+        leaveTo="opacity-0 translate-y-1"
+      >
         <PopoverPanel
           anchor="bottom"
           className="p-6 bg-[#1a1a1a] w-[512px] [--anchor-gap:theme('spacing.2')]"

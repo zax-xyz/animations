@@ -14,4 +14,39 @@ body {
 
 .amogus {
   width: 100px;
+  position: absolute;
+  animation:
+    slide 5s linear both,
+    spin 2s linear infinite,
+    bounce 1s infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    translate: 0 -100%;
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    translate: 0;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
 }
